@@ -13,5 +13,9 @@
 <jsp:getProperty property="id" name="b"/>
 <jsp:getProperty property="name" name="b"/>
 <jsp:getProperty property="add" name="b"/>
+
+<%
+out.print(b.getName());
+%>
 </body>
 </html>
