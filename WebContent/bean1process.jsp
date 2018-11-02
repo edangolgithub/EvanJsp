@@ -7,8 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
 <jsp:useBean id="b" class="evan.beans.Mrbean"></jsp:useBean>
+
 <jsp:setProperty property="*" name="b"/>
+
+
 
 <jsp:getProperty property="id" name="b"/>
 <jsp:getProperty property="name" name="b"/>

@@ -3,9 +3,9 @@ package evan.beans;
 public class Mrbean {
 
 	private int id;
-	private String name;
-	
+	private String name;	
 	private String add;
+	
 
 	public int getId() {
 		return id;

@@ -8,6 +8,9 @@
 </head>
 <body>
 <h1>this is main page</h1>
+
+
 <jsp:include page="beanform.jsp"></jsp:include>
+
 </body>
 </html>

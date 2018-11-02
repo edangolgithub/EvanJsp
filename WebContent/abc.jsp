@@ -7,12 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="bean1process.jsp" method="post">
-id:<input type="text" name="id"><br>  
-name:<input type="text" name="name"><br>  
-add:<input type="text" name="add"><br>  
-<input type="submit" value="ok">  
+<%
+out.print("hi i am forwarded");
 
-</form>
+
+%>
 </body>
 </html>
