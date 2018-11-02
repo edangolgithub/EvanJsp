@@ -11,7 +11,7 @@
 <h1>here</h1>
 <%
 String s=request.getHeader("User-Agent");
-out.print(s);
+//out.print(s);
 Cookie[] cookies=request.getCookies();
 Cookie cookie;
 for(int i=0;i<cookies.length;i++)
@@ -23,6 +23,8 @@ for(int i=0;i<cookies.length;i++)
 	}
 }
 
+String val=(String)session.getAttribute("ab");
+out.print(val);
 %>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
     pageEncoding="ISO-8859-1"%>
    
 <!DOCTYPE html>
@@ -9,10 +9,13 @@
 </head>
 <body>
  <%
+
+session.setAttribute("ab", "100");
 Cookie cookie = new Cookie("a","b");
 
 response.addCookie(cookie);
 response.sendRedirect("redirect.jsp");
+
 %>
 </body>
 </html>
