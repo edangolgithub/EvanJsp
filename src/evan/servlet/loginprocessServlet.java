@@ -26,20 +26,22 @@ public class loginprocessServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		/*
 		Login l= new Login();
 		l.setUsername(request.getParameter("username"));
 		l.setPassword(request.getParameter("password"));
-		
+		*/
 		PrintWriter out= response.getWriter();
 		
-		if(dao.IsValidLogin(l))
+		if(dao.IsValidLogin(request.getParameter("username"),request.getParameter("password")))
 		{
 			
-			out.write("<h1>Login Success</h1>");
+			response.sendRedirect("success.jsp");
 		}
 		else
 		{
-			out.write("<h1>Login failed</h1>");
+		
+			response.sendRedirect("fail.jsp");
 		}
 	}
 

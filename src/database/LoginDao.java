@@ -50,6 +50,36 @@ public ResultSet GetAllLogins()
 	return rs;
 	
 }
+public boolean IsValidLogin(String user,String pass)
+{
+	int rowCount = 0;
+	String sql = "select * from login where username=? and password=?";
+	PreparedStatement st;
+	ResultSet rs = null;
+	try {
+		st = Con.prepareStatement(sql);
+		st.setString(1, user);
+		st.setString(2, pass);
+		rs = st.executeQuery();
+		
+		while ( rs.next() )
+		{
+		    // Process the row.
+		    rowCount++;
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	if(rowCount>0)
+	{
+		return true;
+	}
+	return false;
+	
+	
+}
 public boolean IsValidLogin(Login l)
 {
 	int rowCount = 0;
