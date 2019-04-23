@@ -48,9 +48,9 @@ try {
  while(rs.next())
 {  %>
 <tr><td><%=rs.getString("studentid")%></td>
-<td><%=rs.getString("studentname")%></td>
+<td><%=rs.getString("name")%></td>
 <td><%=rs.getString("roll")%></td>
-<td><%=rs.getString("grade")%></td>
+<td><%=rs.getString("address")%></td>
 </tr>
 <% } %>
 </table>

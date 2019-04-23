@@ -11,7 +11,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ page import="java.util.Date" %>  
+<%@ page import="java.util.Date %>  
+<%@ page import="java.util.*" %>
 Today is: <%= new Date() 
 %>  
 <%-- <%= 100/0 %>   --%>
@@ -19,7 +20,18 @@ Today is: <%= new Date()
 <%-- Today is: <%= new java.util.Date() %>   --%>
 <%@ include file="footer.html" %>  
   
-Today is: <%= java.util.Calendar.getInstance().getTime() %>  
+Today is: <%= java.util.Calendar.getInstance().getTime() %>
+<%
+
+ArrayList<String> list= new ArrayList<String>();
+list.add("hello");
+list.add("hi");
+list.add("haha");
+
+out.print(list.get(0));
+
+
+%>
 
 </body>
 </html>
