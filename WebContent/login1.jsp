@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="pr.jsp" method="get">
+<form action="LoginproServlet" method="get">
 
 username: <input type="text" name="username" /><br />
 password: <input type="password" name="password" /><br/>
