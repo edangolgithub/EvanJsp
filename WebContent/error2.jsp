@@ -7,11 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-out.print("hi i am forwarded");
-
-
-%>
-
+error
 </body>
 </html>

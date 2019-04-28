@@ -38,4 +38,22 @@ public class LoginDao {
 		return false;
 
 	}
+
+	public boolean Registerprocess(String email, String pw) {
+		String sql = "insert into login(username,password) values (?,?)";
+		PreparedStatement st;
+		try {
+			st = con.prepareStatement(sql);
+			st.setString(1, email);
+			st.setString(2, pw);
+			if(st.executeUpdate()>0)
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return false;
+	}
 }

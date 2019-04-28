@@ -7,11 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-out.print("hi i am forwarded");
-
-
-%>
-
+sucess
+<jsp:include page="login1.jsp"></jsp:include>
 </body>
 </html>
