@@ -1,6 +1,8 @@
 package chandra;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginDao {
 
@@ -38,6 +40,24 @@ public class LoginDao {
 		return false;
 
 	}
+	public static List<Login> getRecords(int start,int total){  
+        List<Login> list=new ArrayList<Login>();  
+        try{  
+            
+            PreparedStatement ps=con.prepareStatement(  
+"select * from login limit "+(start-1)+","+total);  
+            ResultSet rs=ps.executeQuery();  
+            while(rs.next()){  
+                Login e=new Login();  
+                e.setUserid(rs.getInt(1));  
+                e.setUsername(rs.getString(2));  
+                e.setPassword(rs.getString(3));  
+                list.add(e);  
+            }  
+            con.close();  
+        }catch(Exception e){System.out.println(e);}  
+        return list;  
+    }  
 
 	public boolean Registerprocess(String email, String pw) {
 		String sql = "insert into login(username,password) values (?,?)";
