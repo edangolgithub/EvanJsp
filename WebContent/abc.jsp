@@ -8,6 +8,7 @@
 </head>
 <body>
 <%
+
 out.print("hi i am forwarded");
 
 
