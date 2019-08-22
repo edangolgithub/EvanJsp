@@ -3,8 +3,7 @@ package database;
 import java.sql.*;
 import java.util.List;
 
-import javatpoint.Student;
-
+import evan.beans.Student;
 import net.proteanit.sql.DbUtils;
 
 public class StudentDao {
@@ -59,12 +58,30 @@ public ResultSet GetAllStudents()
 		try {
 			String sql = "insert into student(studentname,roll,grade)values(?,?,?)";
 			PreparedStatement st = Con.prepareStatement(sql);
-			st.setString(1, s.studentname);
-			st.setString(2, s.roll);
-			st.setString(3, s.grade);
+			st.setString(1, s.getStudentname());
+			st.setString(2, s.getRoll());
+			st.setString(3, s.getGrade());
 			result = st.executeUpdate();
 
 			System.out.println(String.valueOf(result));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}
+		return result;
+	}
+	
+	public int deletestudent(int id)
+	{
+		int result = 0;
+		try {
+			String sql = "delete from student where studentid=?";
+			PreparedStatement st = Con.prepareStatement(sql);
+			st.setInt(1, id);
+			
+			result = st.executeUpdate();
+		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

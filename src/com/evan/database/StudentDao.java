@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.swing.table.TableModel;
 
+import evan.beans.Student;
 import net.proteanit.sql.DbUtils;
 
 public class StudentDao {
@@ -74,13 +75,13 @@ public class StudentDao {
 		st = Con.prepareStatement(sql);
 	}
 
-	public void insertstudent(student s) throws ClassNotFoundException, SQLException {
+	public void insertstudent(Student s) throws ClassNotFoundException, SQLException {
 		try {
 			String sql = "insert into student(studentname,roll,grade)values(?,?,?)";
 			PreparedStatement st = Con.prepareStatement(sql);
-			st.setString(1, s.studentname);
-			st.setString(2, s.roll);
-			st.setString(3, s.grade);
+			st.setString(1, s.getStudentname());
+			st.setString(2, s.getRoll());
+			st.setString(3, s.getGrade());
 			int result = st.executeUpdate();
 
 			System.out.println(String.valueOf(result));
@@ -94,9 +95,4 @@ public class StudentDao {
 
 }
 
-class student {
-	public int studentid;
-	public String studentname;
-	public String roll;
-	public String grade;
-}
+

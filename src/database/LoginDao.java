@@ -2,7 +2,7 @@ package database;
 import java.sql.*;
 
 import evan.beans.Login;
-import javatpoint.Student;
+
 public class LoginDao {
 	public LoginDao() {
 		try {

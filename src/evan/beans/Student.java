@@ -3,6 +3,14 @@ package evan.beans;
 public class Student {
 
 	private int studentid;
+	private String studentname;
+	private String roll;
+	private String grade;
+	
+	public Student()
+	{
+		
+	}
 	public int getStudentid() {
 		return studentid;
 	}
@@ -27,8 +35,6 @@ public class Student {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
-	private String studentname;
-	private String roll;
-	private String grade;
+	
 
 }
