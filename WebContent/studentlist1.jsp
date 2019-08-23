@@ -50,9 +50,10 @@ out.print(rs.getString("grade"));
 %>
 </td>
 <td>
-<button class="btn btn-warning">Edit</button>
+<a href="edit.jsp?id=<% out.print(rs.getInt("studentid"));%>"> <button class="btn btn-warning">Edit</button></a>
 </td>
 <td>
+
 <a href="delete.jsp?id=<% out.print(rs.getInt("studentid"));%>"> <button class="btn btn-danger">Delete</button></a>
 </td>
 </tr>

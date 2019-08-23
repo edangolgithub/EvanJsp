@@ -23,6 +23,7 @@ StudentDao dao= new StudentDao();
 
 dao.insertstudent(obj);
 
+response.sendRedirect("studentlist1.jsp");
 
 %>
 

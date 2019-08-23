@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-import="java.lang.*,javatpoint.Student,database.StudentDao,static java.lang.System.out"
+import="java.lang.*,database.StudentDao,static java.lang.System.out,evan.beans.Student"
     pageEncoding="ISO-8859-1" errorPage="error.jsp" %>
   
 <!DOCTYPE html>
@@ -15,9 +15,9 @@ void doo()
 {
 
 Student st= new Student();
-st.studentname="hari";
-st.roll="2";
-st.grade="XX";
+//st.studentname="hari";
+//st.roll="2";
+//st.grade="XX";
 
 StudentDao dao= new StudentDao();
       if(dao.insertstudent(st)>0)

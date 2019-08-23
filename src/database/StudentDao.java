@@ -53,6 +53,45 @@ public ResultSet GetAllStudents()
 	return rs;
 	
 }
+public ResultSet GetStudentById(int id)
+{
+	String sql = "select * from student where studentid=?";
+	PreparedStatement st;
+	ResultSet rs = null;
+	try {
+		st = Con.prepareStatement(sql);
+		st.setInt(1, id);
+		rs = st.executeQuery();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	return rs;
+	
+}
+public int UpdateStudent(Student s)
+{
+	int result = 0;
+	try {
+		String sql = "update student set studentname=?, roll=?,grade=? where studentid=?";
+		PreparedStatement st = Con.prepareStatement(sql);
+		st.setString(1, s.getStudentname());
+		st.setString(2, s.getRoll());
+		st.setString(3, s.getGrade());
+		st.setInt(4, s.getStudentid());
+		result = st.executeUpdate();
+
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+
+	}
+	return result;
+}
+
 	public int insertstudent(Student s)  {
 		int result = 0;
 		try {
@@ -63,7 +102,6 @@ public ResultSet GetAllStudents()
 			st.setString(3, s.getGrade());
 			result = st.executeUpdate();
 
-			System.out.println(String.valueOf(result));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
