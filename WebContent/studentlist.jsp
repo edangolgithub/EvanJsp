@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
     pageEncoding="ISO-8859-1"%>
     
-    <%@ page import="net.proteanit.sql.DbUtils,java.util.*,javatpoint.Student,java.sql.*,database.StudentDao,java.util.*" %>
+    <%@ page import="net.proteanit.sql.DbUtils,java.util.*,evan.beans.Student,java.sql.*,database.StudentDao,java.util.*" %>
     
 <!DOCTYPE html>
 <html>
